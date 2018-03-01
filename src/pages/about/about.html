@@ -1,0 +1,37 @@
+<ion-header >
+  <ion-navbar color="primary">
+    <ion-title>
+      Weather
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content *ngFor="let i of array">
+
+<div *ngFor="let x of i.data">
+    <figure class="snip1216" >
+      <div class="image"><img src="https://marmar18359.files.wordpress.com/2009/09/2cairoet1.jpg" alt="sample69"/></div>
+      <figcaption>
+
+        <h3>{{x.temp}}</h3>
+        <p>
+         {{x.timeZone}}
+        </p>
+        <p>
+         sunrise at {{x.sunrise}}
+        </p>
+        <p>
+          sunset at {{x.sunset}}
+        </p>
+
+      </figcaption>
+
+      <footer>
+        <div></div>
+        <div></div>
+      </footer>
+    </figure>
+</div>
+  <h3></h3>
+
+  </ion-content>

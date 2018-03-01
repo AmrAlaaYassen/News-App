@@ -1,0 +1,46 @@
+<ion-header>
+  <ion-navbar color="primary">
+    <ion-title>Home</ion-title>
+  </ion-navbar>
+</ion-header>
+
+
+<!--<ion-content *ngFor="let i of array">
+  <div *ngFor="let x of i.data" style="margin: 15px;">
+   <h1>{{x.weather.code}}</h1>
+  </div>
+  <ion-searchbar>
+  </ion-searchbar>
+</ion-content>-->
+
+
+<!--<ion-content *ngFor="let i of array">-->
+  <!--<div *ngFor="let x of i.weather" style="margin: 15px;">-->
+   <!--<h1>{{array}}</h1>-->
+  <!--</div>-->
+  <!--<ion-searchbar>-->
+  <!--</ion-searchbar>-->
+<!--</ion-content>-->
+<ion-content *ngFor="let i of array">
+
+    <ion-searchbar (ionInput)="getItems($event)"></ion-searchbar>
+  <figure class="snip1216" *ngFor="let x of i.articles">
+    <div class="image"><img src="{{x.urlToImage}}" alt="sample69"/></div>
+    <figcaption>
+
+      <h3>{{x.title}}</h3>
+      <p>
+       {{x.description}}
+      </p>
+
+    </figcaption>
+    <a href="{{x.url}}" class="read-more"></a>
+    <footer>
+      <div>{{x.publishedAt}}</div>
+      <div>{{x.source.name}}</div>
+    </footer>
+  </figure>
+
+
+
+</ion-content>
